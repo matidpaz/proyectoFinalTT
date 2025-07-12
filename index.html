@@ -62,7 +62,10 @@
         <!--Seccion de servicios-->
         <section id="Servicios">
             <h2>Servicios</h2>
-            <p>Esta es una seccion de servicios</p>
+            <p>Esta es una seccion de servicios</p><br>
+            <div id="contenedor-productos">
+
+            </div>
         </section>
 
         <!--Seccion sobre nosotros-->
@@ -124,34 +127,35 @@
 
         <section id="FormularioContacto">
             <h2>Formulario:</h2>
+            <div>
 
-            <!-- nombre, apellido, direccion e-mail, telefono-->
-            <form action="https://formspree.io/f/xjkwzbwb" method="post">
-                <div>
-                    <label for="nombre">Nombre</label>
-                    <input type="text" id="nombre" name="nombre" required>
-                </div>
-                <div>
-                    <label for="apellido">Apellido</label>
-                    <input type="text" id="apellido" name="apellido" required>
-                </div>
-                <div>
-                    <label for="direccion">Dirección</label>
-                    <input type="text" id="direccion" name="direccion" required>
-                </div>
-                <div>
-                    <label for="email">Correo electrónico:</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div>
-                    <label for="mensaje">Mensaje</label>
-                    <textarea name="mensaje" id="mensaje" rows="4" cols="50" required></textarea>
-                </div>
-                <div>
-                    <button type="submit">Enviar</button>
-                </div>
-
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3286.926674405402!2d-58.75909322446173!3d-34.53008567298082!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bc97f38f04767d%3A0x1020618f553ca73a!2sBulnes%202684%2C%20B1665CMS%20Jos%C3%A9%20C.%20Paz%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1747627985160!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <!-- nombre, apellido, direccion e-mail, telefono-->
+                <form action="https://formspree.io/f/xjkwzbwb" method="post">
+                    <div class="formulario-items">
+                        <label class="datoFormulario" for="nombre">Nombre</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+                    <div class="formulario-items">
+                        <label class="datoFormulario" for="apellido">Apellido</label>
+                        <input type="text" id="apellido" name="apellido" required>
+                    </div>
+                    <div class="formulario-items">
+                        <label class="datoFormulario" for="direccion">Dirección</label>
+                        <input type="text" id="direccion" name="direccion" required>
+                    </div>
+                    <div class="formulario-items">
+                        <label class="datoFormulario" for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="formulario-items">
+                        <label class="datoFormulario" for="mensaje">Mensaje</label>
+                        <textarea name="mensaje" id="mensaje" rows="4" cols="50" required></textarea>
+                    </div>
+                    <div class="button">
+                        <button type="submit">Enviar</button>
+                    </div>
+            </div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3286.926674405402!2d-58.75909322446173!3d-34.53008567298082!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bc97f38f04767d%3A0x1020618f553ca73a!2sBulnes%202684%2C%20B1665CMS%20Jos%C3%A9%20C.%20Paz%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1747627985160!5m2!1ses!2sar" width="80%" height="80%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </form>
         </section>
     </main>
@@ -175,7 +179,7 @@
             </ul>
         </div>
     </footer>
-
+    <script src="miJavaScript.js"></script>
 </body>
 
 </html>
