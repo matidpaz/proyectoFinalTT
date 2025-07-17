@@ -173,3 +173,41 @@ main{
     justify-content: center;
     margin: 20px;
 }
+
+#carrito{
+    background-color: antiquewhite;
+    border-radius: 10px;
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px;
+}
+.elementosDelCarrito{
+    
+    min-width: 100%;
+}
+
+#restar{
+    width: 22.99px;
+    height: 19.2px;
+}
+
+#sumar{
+    width: 22.99px;
+    height: 19.2px;
+}
+
+#eliminar{
+    background-color: brown;
+    width: 22.99px;
+    height: 19.2px;
+}
+
+.elementosDelCarrito {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px dashed #eee;
+}
