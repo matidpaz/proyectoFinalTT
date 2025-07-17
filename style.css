@@ -32,7 +32,31 @@ a{
     text-decoration: none;
 }
 nav{
-    background: rgb(238, 134, 255, 0.3);
+    background-color: var(--color-primario);
+    padding: 0.8rem 1rem;
+    box-shadow: var(--sombra-suave);
+    margin-bottom: 1rem;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column; /* Apila los elementos de la lista en móviles */
+    align-items: center;
+    gap: 1rem;
+}
+
+.nav-list li a {
+    color: var(--color-claro);
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-list li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    text-decoration: none;
 }
 
 .footerNav{
@@ -50,7 +74,11 @@ nav{
     color: #6f8191;
     width: 10rem; 
     margin: 1rem;
-    
+}
+
+.fa-star {
+    color: gold; /* Color para las estrellas */
+    margin: 0 2px;
 }
 
 form{
@@ -111,6 +139,13 @@ form{
     margin: 20px;
 }
 
+#contenedor-productos {
+    display: grid; /* Usamos Grid para las cards */
+    grid-template-columns: 1fr; /* Una columna en móviles */
+    gap: 1.5rem;
+    padding: 1rem; /* Ajustar padding para evitar desbordamiento */
+}
+
 video{
     
     max-width: 100%; /* Asegura que el video sea responsive */
@@ -137,12 +172,48 @@ main{
     text-align: center; /* Centrar el texto dentro del main, si es necesario */
 }
 
-.div-footer{
-    
-    max-width: 30vh;
-    margin: 0 auto;
-    text-align: left;
+.footerNav h3 {
+    color: var(--color-claro);
+    margin-bottom: 1rem;
 }
+
+.footerNav .nav-list {
+    flex-direction: row; /* Elementos de lista en fila en el footer */
+    justify-content: center;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
+}
+
+.footerNav .nav-list li {
+    margin: 0 10px;
+}
+
+.footerNav .nav-list li a {
+    color: var(--color-claro);
+    font-weight: normal;
+}
+
+.footerNav .nav-list li a:hover {
+    text-decoration: underline;
+}
+
+.div-footer .nav-list {
+    margin-top: 1rem;
+    /* Los iconos de Font Awesome ya están ahí, solo necesitan estilo */
+}
+
+.div-footer .nav-list li {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Espacio entre icono y texto */
+    color: var(--color-claro);
+    font-size: 1.1em;
+}
+
+.div-footer .nav-list li i {
+    font-size: 1.3em;
+    color: var(--color-primario); /* Color para los iconos */
+}
+
 
 #formularioContacto{
     display: flex;
@@ -210,4 +281,15 @@ main{
     align-items: center;
     padding: 10px 0;
     border-bottom: 1px dashed #eee;
+}
+
+section{
+    padding: 2rem 1rem;
+    margin-bottom: 1rem;
+    background-color: var(--color-claro);
+    border-radius: var(--borde-redondeado);
+    box-shadow: var(--sombra-suave);
+    max-width: 1200px; /* Ancho máximo para el contenido principal */
+    margin-left: auto;
+    margin-right: auto;
 }

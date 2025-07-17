@@ -1,3 +1,10 @@
+
+let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+for (let i = 0; i < carrito.length; i++) {
+    console.log(carrito[i]);
+    
+}
+
 let productos = [
     {
         id: 0,
@@ -94,6 +101,7 @@ function agregarACarrito(id) {
         }
     }
     mostrarEstadoDelCarrito(carrito);
+    guardarLocalStore();
 }
 
 
@@ -147,7 +155,14 @@ function eliminarDelCarrito(id) {
         }
     }
 }
-
+//let carrito =[];
+/*document.addEventListener("DOMContentLoaded", function(){
+    carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+});
+*/
+function guardarLocalStore() {
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+}
 
 
 //Funcion para mostrar todos los productos
@@ -181,8 +196,8 @@ function mostraTodosLosProductos(productos) {
 
 mostraTodosLosProductos(productos);
 
-//Funcion que agrega los productos a un carrito
-let carrito = [];
+
+
 
 let divCarrito = document.getElementById("carrito");///////////////////////////////////////////////////
 
@@ -215,7 +230,7 @@ function mostrarEstadoDelCarrito(lista) {
     console.log("Entro a la funcion mostrarEstadoDelCarrito")
     let total = 0;
     if (lista.length === 0) {
-        console.log("No hay ningun elemento dentro del carrito")
+        console.log("No hay ningun elemento dentro del carrito");
         miCarrito.innerHTML = "";
         miCarrito.innerHTML +=
             `
@@ -250,30 +265,23 @@ function mostrarEstadoDelCarrito(lista) {
             <br>
             <p id="total">Total: ${total}</p>
             `
-        console.log("PASA POR ACA VECESSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS")
-        console.log("suma total: " + total);
     }
 }
 if(miCarrito){
-    creoElEvento = true;
     miCarrito.addEventListener("click", function(event){
         const precionado = event.target;
         const idPrecionado = parseInt(event.target.dataset.id);
         if(precionado.classList.contains("restar")){
-        
-            console.log("Aca esta por llamar a la funcion actualizarCantidad - resta - desde el evento");
             actualizarCantiadd(idPrecionado,"restar");
         }
         else if(precionado.classList.contains("sumar")){
-            
-            console.log("Aca esta por llamar a la funcion actualizarCantidad - sumar - desde el evento");
             actualizarCantiadd(idPrecionado,"sumar");
         }
         else{
-           
-            console.log("Aca esta por llamar a la funcion actualizarCantidad - eliminar - desde el evento");
             actualizarCantiadd(idPrecionado,"eliminar");
         }
+        console.log("ACA VIENDO SI ENTRA A LA FUNCION DE GUARDAR EN EL LOCAL STORE");
+        guardarLocalStore();
     })
 }
 mostrarEstadoDelCarrito(carrito);
